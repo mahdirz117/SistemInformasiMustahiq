@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+  <title>Sistem Informasi Mustahiq</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  <!-- Favicons -->
+  <link href="assets/img/lazis.png" rel="icon" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
+
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style-homePage.css" rel="stylesheet" />
+
+  <!-- =======================================================
+  * Template Name: Gp
+  * Updated: May 30 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+      <h2 class="logo me-auto me-lg-0">
+        <a href="index.html">Sistem Informasi Mustahiq<span>.</span></a>
+      </h2>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#clients">Program</a></li>
+          <li><a class="nav-link scrollto" href="#map">Map</a></li>
+          <li><a class="nav-link scrollto" href="#connections">Connection</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <!-- .navbar -->
+      <a href="#map" class="get-started-btn scrollto">Peta Mustahiq</a>
+
+    </div>
+    <style>
+      #map {
+        height: 500px;
+        width: 80%;
+        margin: 20px auto;
+      }
+    </style>
+
+
+  </header>
+  <!-- End Header -->
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center justify-content-center">
+    <div class="container" data-aos="fade-up">
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+        <div class="col-xl-6 col-lg-8">
+          <h1>Persebaran Binaan LAZIS Sabilillah Malang<span>.</span></h1>
+          <h2>menggunakan Sistem Informasi Geografis berbasis (WebGIS)</h2>
+        </div>
+      </div>
+
+      <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="bi bi-house-check"></i>
+            <h3><a href="">Keluarga Cerdas</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 640 512">
+                <path
+                  d="M400 0c5 0 9.8 2.4 12.8 6.4c34.7 46.3 78.1 74.9 133.5 111.5l0 0 0 0c5.2 3.4 10.5 7 16 10.6c28.9 19.2 45.7 51.7 45.7 86.1c0 28.6-11.3 54.5-29.8 73.4H221.8c-18.4-19-29.8-44.9-29.8-73.4c0-34.4 16.7-66.9 45.7-86.1c5.4-3.6 10.8-7.1 16-10.6l0 0 0 0C309.1 81.3 352.5 52.7 387.2 6.4c3-4 7.8-6.4 12.8-6.4zM288 512V440c0-13.3-10.7-24-24-24s-24 10.7-24 24v72H192c-17.7 0-32-14.3-32-32V352c0-17.7 14.3-32 32-32H608c17.7 0 32 14.3 32 32V480c0 17.7-14.3 32-32 32H560V440c0-13.3-10.7-24-24-24s-24 10.7-24 24v72H448V454c0-19-8.4-37-23-49.2L400 384l-25 20.8C360.4 417 352 435 352 454v58H288zM70.4 5.2c5.7-4.3 13.5-4.3 19.2 0l16 12C139.8 42.9 160 83.2 160 126v2H0v-2C0 83.2 20.2 42.9 54.4 17.2l16-12zM0 160H160V296.6c-19.1 11.1-32 31.7-32 55.4V480c0 9.6 2.1 18.6 5.8 26.8c-6.6 3.4-14 5.2-21.8 5.2H48c-26.5 0-48-21.5-48-48V176 160z" />
+              </svg>
+            </span>
+            <h3><a href="">Forum Musholla</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="bi bi-book"></i>
+            <h3><a href="">Forum TPQ</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="bi bi-person-add"></i>
+            <h3><a href="">Cinta Lansia</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 448 512">
+                <path
+                  d="M352 0c53 0 96 43 96 96V416c0 53-43 96-96 96H64 32c-17.7 0-32-14.3-32-32s14.3-32 32-32V384c-17.7 0-32-14.3-32-32V32C0 14.3 14.3 0 32 0H64 352zm0 384H96v64H352c17.7 0 32-14.3 32-32s-14.3-32-32-32zM274.1 150.2l-8.9 21.4-23.1 1.9c-5.7 .5-8 7.5-3.7 11.2L256 199.8l-5.4 22.6c-1.3 5.5 4.7 9.9 9.6 6.9L280 217.2l19.8 12.1c4.9 3 10.9-1.4 9.6-6.9L304 199.8l17.6-15.1c4.3-3.7 2-10.8-3.7-11.2l-23.1-1.9-8.9-21.4c-2.2-5.3-9.6-5.3-11.8 0zM96 192c0 70.7 57.3 128 128 128c25.6 0 49.5-7.5 69.5-20.5c3.2-2.1 4.5-6.2 3.1-9.7s-5.2-5.6-9-4.8c-6.1 1.2-12.5 1.9-19 1.9c-52.4 0-94.9-42.5-94.9-94.9s42.5-94.9 94.9-94.9c6.5 0 12.8 .7 19 1.9c3.8 .8 7.5-1.3 9-4.8s.2-7.6-3.1-9.7C273.5 71.5 249.6 64 224 64C153.3 64 96 121.3 96 192z" />
+              </svg> </span>
+            <h3><a href="">Madrasah Al-Quran</a></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero -->
+
+  <main id="main">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="" />
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+            <h3>
+              Latar Belakang
+            </h3>
+            <p align="justify">
+              LAZIS Sabilillah didirikan dengan tujuan menguatkan program dakwah sosial
+              Yayasan Sabilillah dalam bidang kemanusiaan dan peningkatan kesejahteraan umat
+              melalui pengelolaan Zakat, Infaq, Shodaqoh dan Wakaf (ZISWAF). Selama 17 tahun
+              hingga saat ini 2023 LAZIS Sabilillah telah mendapatkan kepercayaan dari masyarakat
+              khususnya Malang raya untuk mengelola dana ZISWAF guna meningkatkan kesejahteraan
+              masyarakat dan penanggulangan kemiskinan di Kota Malang, Kabupaten Malang,
+              Kota Batu dan sekitarnya.
+
+              Begitu pesatnya perkembangan LAZIS Sabilillah tentunya berkat dukungan para aghniya' / donatur
+              yang istiqomah dan telah mempercayakan sebagian harta bendanya untuk diberikan kepada mustahiq.
+              Maka dari itu, untuk pengoptimalan manajemen dan distribusi yang merata tercetuslah Peta Persebaran
+              Binaan LAZIS Sabilillah Malang menggunakan Sistem Informasi Geografis berbasis (WebGIS).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End About Section -->
+
+    <!-- ======= Connection Section ======= -->
+    <section id="clients" class="clients">
+      <div class="container" data-aos="zoom-in">
+        <div class="clients-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-1.png" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-2.png" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-3.png" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-4.png" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-5.png" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-6.png" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-7.png" class="img-fluid" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-8.png" class="img-fluid" alt="" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <!-- End Clients Section -->
+
+    <!-- ======= Map Section ======= -->
+    <div id="map">
+      <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+      <style>
+        /* Gaya untuk kontrol basemap dan data binaan */
+        .leaflet-control-layers-base,
+        .leaflet-control-layers-overlays {
+          border: 1px solid #bbb;
+          border-radius: 4px;
+          padding: 6px;
+          margin-bottom: 8px;
+        }
+
+        /* Gaya untuk garis pembatas antara kontrol */
+        .leaflet-control-layers-separator {
+          height: 1px;
+          background-color: #bbb;
+          margin: 5px 0;
+        }
+      </style>
+
+
+      <script>
+        // Koordinat Masjid Sabilillah
+        const latitude = -7.942013851388723;
+        const longitude = 112.64134936630214;
+        const zoomLevel = 13.5;
+
+        // Data lokasi Binaan
+        const locations = [
+
+          // MASJID SABILILLAH
+          {
+            type: 'Sabilillah',
+            id: 'NIM: 15',
+            name: 'MASJID SABILILLAH MALANG',
+            birth_date: 'Tgl. Lahir: 1977',
+            lat: -7.942013851388723,
+            lng: 112.64134936630214,
+            distance: 'Jarak ke Masjid Sabilillah: 0 Km',
+            address: 'Alamat: Jl. A. Yani No.15, Blimbing, Kec. Blimbing, Kota Malang, Jawa Timur 65126',
+          },
+          // YATIM
+          {
+            type: 'Yatim',
+            id: 'NIM: 001060001',
+            name: 'SINDY CHITRA DEWI',
+            birth_date: 'Tgl. Lahir: 2005-12-12',
+            lat: -7.966426272,
+            lng: 112.6542856,
+            distance: 'Jarak ke Masjid Sabilillah: 4.3 Km',
+            address: 'Alamat: JL.SIMPANG SULFAT SELATAN III NO.62',
+          },
+          {
+            type: 'Yatim',
+            id: 'NIM: 001050002',
+            name: 'FITRI AGUSTIN RAMADHANI',
+            birth_date: 'Tgl. Lahir: 2010-08-22',
+            lat: -7.949272133,
+            lng: 112.6557129,
+            distance: 'Jarak ke Masjid Sabilillah: 4.3 Km',
+            address: 'Alamat: JL.LA.SUCIPTO Gg.22 B/NO.27 B',
+          },
+          {
+            type: 'Yatim',
+            id: 'NIM: 001090003',
+            name: 'ROSIANA ANUGRAH SENTOSA',
+            birth_date: 'Tgl. Lahir: 2006-07-23',
+            lat: -7.926053403281822,
+            lng: 112.65170269801423,
+            distance: 'Jarak ke Masjid Sabilillah: 2.7 Km',
+            address: 'Alamat: JL.SIMPANG SATRIA NO.11',
+          },
+          {
+            type: 'Yatim',
+            id: 'NIM: 001120004',
+            name: 'DONI PRATAMA',
+            birth_date: 'Tgl. Lahir: 2007-03-24',
+            lat: -7.929853223,
+            lng: 112.6460028,
+            distance: 'Jarak ke Masjid Sabilillah: 1.6 Km',
+            address: 'Alamat: JL.CAKALANG 100 E',
+          },
+          {
+            type: 'Yatim',
+            id: 'NIM: 001110005',
+            name: 'JESICA AURELLIA ORLIN',
+            birth_date: 'Tgl. Lahir: 2014-03-14',
+            lat: -7.930214836,
+            lng: 112.6468543,
+            distance: 'Jarak ke Masjid Sabilillah: 1.5 Km',
+            address: 'Alamat: JL.CAKALANG 83',
+          },
+
+          // DHUAFA
+          {
+            type: 'Dhuafa',
+            id: 'NIM: 002080011',
+            name: 'BANU YASA',
+            birth_date: 'Tgl. Lahir: 2009-04-19',
+            lat: -7.944601787,
+            lng: 112.6530506,
+            distance: 'Jarak ke Masjid Sabilillah: 2.1 Km',
+            address: 'Alamat: JL.TELUK GRAJAKAN Gg. TRUBUS NO.41 D',
+          },
+          {
+            type: 'Dhuafa',
+            id: 'NIM: 002090012',
+            name: 'FIKI FERNANDA PUTRA',
+            birth_date: 'Tgl. Lahir: 2007-08-29',
+            lat: -7.940079935625778,
+            lng: 112.6456516341307,
+            distance: 'Jarak ke Masjid Sabilillah: 0.13 Km',
+            address: 'Alamat: JL.AHMAD YANI UTARA NO.22',
+          },
+          {
+            type: 'Dhuafa',
+            id: 'NIM: 002110013',
+            name: 'NABIL RAMADHAN ALMALANY',
+            birth_date: 'Tgl. Lahir: 2006-07-23',
+            lat: -7.927854615,
+            lng: 112.648174,
+            distance: 'Jarak ke Masjid Sabilillah: 1.8 Km',
+            address: 'Alamat: JL.POLOWIJEN II/282',
+          },
+          {
+            type: 'Dhuafa',
+            id: 'NIM: 002020014',
+            name: 'AMANDA NUR AGUSTINA',
+            birth_date: 'Tgl. Lahir: 2007-03-24',
+            lat: -7.932854547,
+            lng: 112.649896,
+            distance: 'Jarak ke Masjid Sabilillah: 2.2 Km',
+            address: 'Alamat: JL.PANJI SUROSO UTARA I/51 A',
+          },
+          {
+            type: 'Dhuafa',
+            id: 'NIM: 002040015',
+            name: 'GLADIS AULIA NUR A',
+            birth_date: 'Tgl. Lahir: 2014-03-14',
+            lat: -7.933964092904679,
+            lng: 112.65664773312074,
+            distance: 'Jarak ke Masjid Sabilillah: 2.2 Km',
+            address: 'Alamat: JL.PANJI SUROSO UTARA I/51 A',
+          },
+
+          // MUSHOLLA
+          {
+            type: 'Musholla',
+            id: 'NIM: 003060021',
+            name: 'Musholla Al-Hikmah',
+            birth_date: 'Tgl. Lahir: 1982-07-15',
+            lat: -7.941295965,
+            lng: 112.638237,
+            distance: 'Jarak ke Masjid Sabilillah: 0,45 Km',
+            address: 'Alamat: Jl. C.Trowulan No.65A, RW.02',
+          },
+          {
+            type: 'Musholla',
+            id: 'NIM: 003090022',
+            name: 'Musholla As-Salam',
+            birth_date: 'Tgl. Lahir: 1979-05-22',
+            lat: -7.940955935,
+            lng: 112.6328297,
+            distance: 'Jarak ke Masjid Sabilillah: 1.3 Km',
+            address: 'Alamat: Jl. C. Sari Utara, Mojolangu',
+          },
+          {
+            type: 'Musholla',
+            id: 'NIM: 003070023',
+            name: 'Musholla Nurul Iman',
+            birth_date: 'Tgl. Lahir: 1975-12-30',
+            lat: -7.937959404,
+            lng: 112.6400395,
+            distance: 'Jarak ke Masjid Sabilillah: 0.3 Km',
+            address: 'Alamat: Jl. Simpang Borobudur, Mojolangu',
+          },
+          {
+            type: 'Musholla',
+            id: 'NIM: 003030030',
+            name: 'Musholla At-Taqwa',
+            birth_date: 'Tgl. Lahir: 1942-01-20',
+            lat: -7.950174482,
+            lng: 112.6392739,
+            distance: 'Jarak ke Masjid Sabilillah: 2 Km',
+            address: 'Alamat: Jl. Letjend S. Parman No.81, Purwantoro',
+          },
+          {
+            type: 'Musholla',
+            id: 'NIM: 003040029',
+            name: 'Musholla An-Nur',
+            birth_date: 'Tgl. Lahir: 1946-08-03',
+            lat: -7.951864287,
+            lng: 112.6429887,
+            distance: 'Jarak ke Masjid Sabilillah: 2.1 Km',
+            address: 'Alamat: Jl. Ciliwung I, Purwantoro',
+          },
+
+          // TPQ
+          {
+            type: 'TPQ',
+            id: 'NIM: 004010031',
+            name: 'TPQ Riyadul Jannah',
+            birth_date: 'Tgl. Lahir: 1992-06-15',
+            lat: -7.958188219,
+            lng: 112.6007026,
+            distance: 'Jarak ke Masjid Sabilillah: 8.4 Km',
+            address: 'Alamat: Jl.Raya Candi V, 285',
+          },
+          {
+            type: 'TPQ',
+            id: 'NIM: 004060032',
+            name: 'TPQ Nurul Huda',
+            birth_date: 'Tgl. Lahir: 1988-03-22',
+            lat: -7.940955935,
+            lng: 112.6328297,
+            distance: 'Jarak ke Masjid Sabilillah: 1.3 Km',
+            address: 'Alamat: Jl. C. Sari Utara, Mojolangu',
+          },
+          {
+            type: 'TPQ',
+            id: 'NIM: 004050033',
+            name: 'TPQ Al Azhar',
+            birth_date: 'Tgl. Lahir: 1985-12-30',
+            lat: -7.93661359,
+            lng: 112.6474336,
+            distance: 'Jarak ke Masjid Sabilillah: 1.9 Km',
+            address: 'Alamat: Jl.Pulosari I/30',
+          },
+          {
+            type: 'TPQ',
+            id: 'NIM: 004040034',
+            name: 'TPQ Nurul Iman 1',
+            birth_date: 'Tgl. Lahir: 1982-11-05',
+            lat: -7.918018186,
+            lng: 112.6430933,
+            distance: 'Jarak ke Masjid Sabilillah: 3.5 Km',
+            address: 'Alamat: Perum Karanglo Indah, Blok H 9a',
+          },
+          {
+            type: 'TPQ',
+            id: 'NIM: 004080035',
+            name: 'TPQ An Nur',
+            birth_date: 'Tgl. Lahir: 1979-09-17',
+            lat: -7.940363601,
+            lng: 112.6249834,
+            distance: 'Jarak ke Masjid Sabilillah: 2.3 Km',
+            address: 'Alamat: Perum Griya Santa Blok H 106 A',
+          },
+
+          // LANSIA
+          {
+            type: 'Lansia',
+            id: 'NIM: 005070041',
+            name: 'KORYAH BAIYAH',
+            birth_date: 'Tgl. Lahir: 1952-07-15',
+            lat: -7.929700841,
+            lng: 112.643241,
+            distance: 'Jarak ke Masjid Sabilillah: 2 Km',
+            address: 'Alamat: JL.CAKALANG Gg.MAKAM 172 E',
+          },
+          {
+            type: 'Lansia',
+            id: 'NIM: 005090042',
+            name: 'PUJIWATI',
+            birth_date: 'Tgl. Lahir: 1949-05-22',
+            lat: -7.935448911,
+            lng: 112.6410934,
+            distance: 'Jarak ke Masjid Sabilillah: 1.2 Km',
+            address: 'Alamat: JL.IKAN HIU 30',
+          },
+          {
+            type: 'Lansia',
+            id: 'NIM: 005080043',
+            name: 'SUGI WARAS',
+            birth_date: 'Tgl. Lahir: 1947-12-30',
+            lat: -7.928351077,
+            lng: 112.6283109,
+            distance: 'Jarak ke Masjid Sabilillah: 2.8 Km',
+            address: 'Alamat: JL.IKAN KAKAP',
+          },
+          {
+            type: 'Lansia',
+            id: 'NIM: 005050045',
+            name: 'Ahmad Saifullah',
+            birth_date: 'Tgl. Lahir: 1941-03-17',
+            lat: -7.932063296840296,
+            lng: 112.66966599513736,
+            distance: 'Jarak ke Masjid Sabilillah: 8.1 Km',
+            address: 'Alamat: Dusun pulesari tirtomoyo no 51, RT.4 rw10, Sumber Bening, Tirtomoyo, Kec. Pakis',
+          },
+          {
+            type: 'Lansia',
+            id: 'NIM: 005020046',
+            name: 'Siti Maryam',
+            birth_date: 'Tgl. Lahir: 1938-09-28',
+            lat: -7.9723404432175,
+            lng: 112.63595445303667,
+            distance: 'Jarak ke Masjid Sabilillah: 15.4 Km',
+            address: 'Alamat: Wonorejo, Singosari, Malang',
+          },
+          {
+            type: 'Lansia',
+            id: 'NIM: 005030047',
+            name: 'Abdul Rahman',
+            birth_date: 'Tgl. Lahir: 1935-02-10',
+            lat: -7.970607954,
+            lng: 112.599975,
+            distance: 'Jarak ke Masjid Sabilillah: 9.6 Km',
+            address: 'Alamat: Jl. Dieng Atas, Sumberjo, Kalisongo, Kec. Dau, Kabupaten Malang',
+          },
+          // Tambahkan lokasi binaan lainnya di sini
+        ];
+
+        // Fungsi untuk menampilkan peta dan marker
+        function initMap() {
+          const map = L.map('map').setView([latitude, longitude], zoomLevel);
+
+          // Fungsi untuk menampilkan basemap 
+          const basemaps = {
+            'OpenStreetMap': L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'),
+            'OpenTopoMap': L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png'),
+            'Esri World Imagery': L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'),
+            'Cartocdn Light': L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png'),
+            'Cartocdn Dark': L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png'),
+            'Stadia OSM Bright': L.tileLayer('https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png'),
+            'CyclOSM': L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png'),
+            'Esri World Topo Map': L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}'),
+          };
+
+          // Tambahkan basemap default ke peta
+          basemaps['OpenStreetMap'].addTo(map);
+
+          const icons = {
+            Sabilillah: L.icon({
+              iconUrl: 'assets/img/point/masjid-sabilillah.png',
+              iconSize: [45, 45],
+              iconAnchor: [12, 41],
+              popupAnchor: [1, -34]
+            }),
+            Yatim: L.icon({
+              iconUrl: 'assets/img/point/yatim.png',
+              iconSize: [30, 30],
+              iconAnchor: [12, 41],
+              popupAnchor: [1, -34]
+            }),
+            Dhuafa: L.icon({
+              iconUrl: 'assets/img/point/dhuafa.png',
+              iconSize: [30, 30],
+              iconAnchor: [12, 41],
+              popupAnchor: [1, -34]
+            }),
+            Musholla: L.icon({
+              iconUrl: 'assets/img/point/musholla.png',
+              iconSize: [30, 30],
+              iconAnchor: [12, 41],
+              popupAnchor: [1, -34]
+            }),
+            Lansia: L.icon({
+              iconUrl: 'assets/img/point/lansia.png',
+              iconSize: [30, 30],
+              iconAnchor: [12, 41],
+              popupAnchor: [1, -34]
+            }),
+            TPQ: L.icon({
+              iconUrl: 'assets/img/point/tpq.png',
+              iconSize: [30, 30],
+              iconAnchor: [12, 41],
+              popupAnchor: [1, -34]
+            })
+          };
+
+
+          // Buat layer terpisah untuk setiap kategori binaan
+          const layers = {};
+          locations.forEach(location => {
+            if (!layers[location.type]) {
+              layers[location.type] = L.layerGroup().addTo(map);
+            }
+
+            const marker = L.marker([location.lat, location.lng], {
+              icon: icons[location.type]
+            }).addTo(layers[location.type]);
+            marker.bindPopup(`<b>${location.name}</b>
+                                  <br>${location.type}
+                                  <br>${location.id}
+                                  <br>${location.birth_date}
+                                  <br>${location.distance}
+                                  <br>${location.address}`);
+          });
+
+          // Tambahkan control untuk mengaktifkan/menonaktifkan layer
+          L.control.layers(basemaps, layers).addTo(map);
+        }
+
+        // Panggil fungsi untuk menampilkan peta
+        initMap();
+      </script>
+    </div>
+    <!-- End Map Section -->
+
+    <!-- ======= Connections Section ======= -->
+    <section id="connections" class="counts">
+      <div class="container" data-aos="fade-up">
+        <div class="row no-gutters">
+          <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start"
+            data-aos="fade-right" data-aos-delay="100"></div>
+          <div class="col-xl-7 ps-4 ps-lg-5 pe-4 pe-lg-1 d-flex align-items-stretch" data-aos="fade-left"
+            data-aos-delay="100">
+            <div class="content d-flex flex-column justify-content-center">
+              <h3>Koneksi LAZIS Sabilillah:</h3>
+              <p>
+                LAZIS Sabilillah tanpa Donatur, Penerima Manfaat, dan Relawan
+                yang berjibaku dengan begitu semangat untuk kemasalahatan umat
+                tidak akan berkembang dengan begitu pesat hingga hari ini
+              </p>
+              <div class="row">
+                <div class="col-md-6 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="bi bi-emoji-smile"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="83021" data-purecounter-duration="2"
+                      class="purecounter"></span>
+                    <p>
+                      <strong>Penerima Manfaat</strong> terdiri dari Keluarga Cerdas (Yatim & Dhuafa), Mushola Binaan,
+                      Forum TPQ, dll.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="bi bi-journal-richtext"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="71" data-purecounter-duration="2"
+                      class="purecounter"></span>
+                    <p>
+                      <strong>Jangkauan</strong> daerah makin meluas sejalan dengan semakin banyaknya
+                      donatur yang percaya dengan keamanahan LAZIS Sabilillah.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="bi bi-clock"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="130" data-purecounter-duration="2"
+                      class="purecounter"></span>
+                    <p>
+                      <strong>Relawan</strong> atau yang biasa disebut Volunteer siap dan sigap
+                      untuk mendukung berjalannya setiap kegiatan LAZIS Sabilillah.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="bi bi-award"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="8631" data-purecounter-duration="2"
+                      class="purecounter"></span>
+                    <p>
+                      <strong>Donatur</strong> yang telah mempercayakan sebagian harta maupun bendanya
+                      yang untuk diberikan kepada orang yang lebih membutuhkan merupakan salah satu kunci
+                      begitu pesatnya perkembangan LAZIS Sabilillah.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End .content-->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Counts Section -->
+
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Team</h2>
+          <p>Check our Team</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="" />
+                <div class="social">
+                  <a href="https://wa.me/6285954312258"><i class="bi bi-whatsapp"></i></a>
+                  <a href="https://www.facebook.com/mahdi.zaki.180"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/mahdi.r.zaki/"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/mahdi-romzuz-zaki-b41b77248/"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Mahdi Romzuz Zaki</h4>
+                <span>Treasurer of IT Media Division</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+    </section>
+    <!-- End Team Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Contact Us</p>
+        </div>
+
+        <div>
+          <iframe style="border: 0; width: 100%; height: 270px"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15806.188950522825!2d112.6414655!3d-7.942262!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd629c0458ce645%3A0xcb4d6f9e45f1c998!2sLAZIS%20Sabilillah!5e0!3m2!1sen!2sid!4v1689248216604!5m2!1sen!2sid"
+            frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Sabilillah Mosque, Jl. A. Yani No.15, Blimbing, Malang City, East Java 65126</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>info@lazissabilillah.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>0341 2110211</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required />
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required />
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required />
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">
+                  Your message has been sent. Thank you!
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Contact Section -->
+  </main>
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>LAZIS Sabilillah<span>.</span></h3>
+              <p>
+                Sabilillah Mosque,<br />
+                Jl. A. Yani No.15, Blimbing,<br />
+                Malang City, East Java 65126<br /><br />
+                <strong>Phone:</strong> 0341 2110211<br />
+                <strong>Email:</strong> info@lazissabilillah.com<br />
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter">
+                  <i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="https://wa.me/+62898008098" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li>
+                <i class="bx bx-chevron-right"></i> <a href="#">Home</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i> <a href="#">About us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>
+              Kirimkan Email anda untuk mendapatkan update setiap saat
+            </p>
+            <form action="" method="post">
+              <input type="email" name="email" /><input type="submit" value="Subscribe" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>2023 LAZIS Sabilillah Malang</span></strong><br />. All Rights Reserved IT Media
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ -->
+        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
